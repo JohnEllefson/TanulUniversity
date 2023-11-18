@@ -1,0 +1,34 @@
+﻿@model IEnumerable<TanulUniversity.Models.SchoolViewModels.EnrollmentDateGroup>
+
+@{
+    ViewData["Title"] = "Student Body Statistics";
+}
+
+<h2>Student Body Statistics</h2>
+
+<table class="table-font-black">
+    <tr>
+        <th>
+            Enrollment Date
+        </th>
+        <th style ="padding-left: 30px">
+            Students
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td style="padding-left: 55px">
+                @item.StudentCount
+            </td>
+        </tr>
+    }
+</table>
+
+<br />
+
+<h6>If you have any questions you may contact John Ellefson at (555) 555-5555 or at JEllefson.Tanul@gmail.com</h6>
